@@ -1,0 +1,579 @@
+/*Ni se ve tan feo :D*/
+/*Poner la fuente 
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+    */
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+html {
+    padding: 0px;
+    margin: 0pc;
+}
+
+body {
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 10%;
+    background-color: #7eb9f5;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Crimson Text', serif;
+    font-family: 'EB Garamond', serif;
+}
+
+
+/*NAV BAR*/
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #d0f0f8;
+    position:  fixed;
+    z-index: 10;
+
+
+}
+
+.interior {
+    max-width: 100%;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.logo {
+    float: left;
+    padding: 5px 20px 0;
+}
+
+.logo img {
+    height: 90px;
+    padding: 10px;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+}
+
+.navegacion {
+    float: right;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    z-index: 1000;
+}
+
+li a.active,
+li a:hover {
+    background: #8ce0e6;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.navegacion ul li {
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    transition: .3s linear;
+    z-index: 1000;
+}
+
+.navegacion ul li:hover {
+    transform: scale(1.1);
+}
+
+.navegacion ul li a {
+    color: #222222;
+    text-align: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 20px;
+    transition: .3s linear;
+}
+
+.navegacion ul li a:hover {
+    color: #0e0ae7;
+    transform: scale(1.1);
+}
+
+.navegacion ul li:hover .hijos {
+    display: block;
+    border-radius: 10px;
+}
+
+.navegacion .submenu .hijos {
+    display: none;
+    /*fondo de los menus secun*/
+    background: #d0f0f8;
+    position: absolute;
+    width: 100%;
+}
+
+.navegacion .submenu .hijos li {
+    display: block;
+    overflow: hidden;
+    border-bottom: none;
+}
+
+.navegacion .submenu .hijos li a {
+    display: block;
+}
+
+/*NAV BAR FIN*/
+@media (max-width: 858px) {
+    header {
+        height: 150px;
+    }
+
+    header .interior {
+        display: grid;
+        grid-template-rows: 50% auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    .logo {
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navegacion li {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 0px;
+        padding-bottom: 15px;
+    }
+
+    .navegacion ul li a {
+        display: inline-block;
+        font-size: 8.2px;
+    }
+
+}
+
+/*NAV BAR FIN TOTAL*/
+/* Banner */
+
+.banner {
+    width: 100%;
+    height: 700px;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes banner {
+
+    0%,
+    20% {
+        background-image: url(../CSS/banner/fondo.jpg);
+    }
+
+    25%,
+    45% {
+        background-image: url(../CSS/banner/fondo1.jpg);
+    }
+
+    50%,
+    70% {
+        background-image: url(../CSS/banner/fondo2.jpg);
+    }
+
+    75%,
+    100% {
+        background-image: url(../CSS/banner/fondo3.jpg);
+    }
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+.info {
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.info h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 7px;
+    cursor: pointer;
+}
+
+h1 span {
+    transition: .5s linear;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+}
+
+h1:hover span:nth-child(1) {
+    margin-right: 5px;
+}
+
+h1:hover span:nth-child(2) {
+    margin-right: 20px;
+}
+
+h1:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+        0 0 50px rgb(233, 229, 30),
+        0 0 30px #fff;
+}
+
+
+.titulo {
+    font-size: 2.5rem;
+    text-shadow: black;
+    color: white;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+}
+
+.info p {
+    color: #c7c7c7;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+}
+
+p span {
+    font-size: 30px;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+}
+
+p:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+        0 0 50px rgb(30, 192, 233),
+        0 0 30px #fff;
+}
+
+
+/*Fin del Banner*/
+
+
+/*Main*/
+/*bolitas*/
+.bolitasConteiner {
+    display: flex;
+    justify-content: center;
+    background-color: #a1c8f4;
+}
+
+a {
+    color: #000000;
+
+}
+
+.bolas img {
+    margin: 30px 100px 20px 100px;
+    border-radius: 80%;
+    height: 200px;
+    width: 200px;
+}
+
+.bolas h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 858px) {
+    .bolitasConteiner {
+        display: block;
+        padding: 25px 0 25px 0;
+    }
+
+    .bolas img {
+        margin: 30px 50px 20px 100px;
+    }
+}
+
+
+.card {
+    background-color: rgb(238, 249, 252);
+}
+
+
+.tituloDeConjuntoCards {
+    padding: 30px 0px 10px 60px;
+    font-size: 50px;
+    color: black;
+}
+
+
+.contenedorDeCards {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+.contenedorDeCards .card {
+    width: 90%;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 9%;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.contenedorDeCards .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenedorDeCards .card img {
+    width: 100%;
+    height: 220px;
+}
+
+
+.contenedorDeCards .card h4 {
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+.contenedorDeCards .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contenedorDeCards .card a {
+    font-weight: 500;
+    color: #3498db;
+}
+
+.fecha {
+    margin-top: 10px;
+    color: #000000;
+    margin-bottom: 10px;
+    top: 80px;
+    left: 10px;
+}
+
+@media (max-width: 858px) {
+    .tituloDeConjuntoCards {
+        font-size: 20px;
+        padding: 25px;
+    }
+
+    .contenedorDeCards {
+        display: grid;
+        grid-template-columns: 50% auto;
+        padding: 2px;
+        margin: 5px;
+
+    }
+
+
+}
+
+/*Fin de la Card Main*/
+
+/*Apartado de mision objetivo y vision*/
+
+.contDeMision {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    padding: 100px 0px 100px 0px;
+}
+
+.mision {
+    justify-content: center;
+    text-align: center;
+}
+
+.mision h1 {
+    justify-content: center;
+    font-size: 65px;
+}
+
+.mision p {
+    padding-top: 10px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    font-size: 34px;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Cinzel', serif;
+    font-family: 'Crimson Text', serif;
+    font-family: 'EB Garamond', serif;
+}
+
+.parrMis {
+    text-align: center;
+    margin: 10px;
+    padding: 30px;
+    color: #000000;
+    padding-bottom: 0px;
+}
+
+.conteinerAgregar {
+    background-color: rgb(92, 122, 234);
+}
+
+@media (max-width: 858px) {
+
+    .mision h1 {
+        font-size: 45px;
+
+    }
+
+    .parrMis {
+        text-align: center;
+        color: #000000;
+        margin: 0px;
+        padding: 20px 20px 20px 20px;
+        font-size: 24px !important;
+
+    }
+
+    .contDeMision {
+        display: block;
+        margin: 0%;
+    }
+}
+
+/*Fin del Main*/
+
+/* Footer */
+
+footer {
+    width: 100%;
+    padding: 50px 0px;
+    background-color: #d0f0f8;
+    background-image: url(../Images/background-footer.svg);
+    background-size: cover;
+}
+
+.container__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.box__footer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo img {
+    width: 180px;
+}
+
+.box__footer .terms {
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500px;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2 {
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a {
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover {
+    opacity: 0.8;
+}
+
+.box__footer a .fab {
+    font-size: 20px;
+}
+
+.box__copyright {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p {
+
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr {
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* agregara a los otros footers */
+    /* esto es para que el footer para que quede abajo */
+    .box__footer .logo img {
+        width: 180px;
+        margin: 10px 10px 10px -59px;
+    }
+
+
+}
+
+/* Fin del Footer */
